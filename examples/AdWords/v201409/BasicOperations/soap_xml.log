@@ -1,0 +1,151 @@
+[Dec 26 2014 02:10:39.000000 - ERROR] POST /api/adwords/cm/v201409/CampaignService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.5.12, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 413
+Authorization: Bearer ya29.6AAhm2Y9olkHSKJi1AB4GoHUYDb6pxDNY4TzIPrQntRr0DU_Dsp8pAGGDdehdwQd7Z0QbQ-AUuY-Pw
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201409">
+  <SOAP-ENV:Header>
+    <ns1:RequestHeader>
+      <ns1:developerToken>7vr3ixYdPVjWWQ_tvKuIjg</ns1:developerToken>
+      <ns1:userAgent>claes.noren@nitea.se (AwApi-PHP/5.7.1, Common-PHP/5.7.1, PHP/5.5.12)</ns1:userAgent>
+    </ns1:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns1:get>
+      <ns1:serviceSelector>
+        <ns1:fields>Id</ns1:fields>
+        <ns1:fields>Name</ns1:fields>
+        <ns1:ordering>
+          <ns1:field>Name</ns1:field>
+          <ns1:sortOrder>ASCENDING</ns1:sortOrder>
+        </ns1:ordering>
+        <ns1:paging>
+          <ns1:startIndex>0</ns1:startIndex>
+          <ns1:numberResults>500</ns1:numberResults>
+        </ns1:paging>
+      </ns1:serviceSelector>
+    </ns1:get>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 500 Internal Server Error
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Fri, 26 Dec 2014 01:10:39 GMT
+Expires: Fri, 26 Dec 2014 01:10:39 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 518
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns="https://adwords.google.com/api/adwords/cm/v201409">
+      <requestId>00050b143162df410ac43204df001aa0</requestId>
+      <serviceName>CampaignService</serviceName>
+      <methodName>get</methodName>
+      <operations>0</operations>
+      <responseTime>18</responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <faultcode>soap:Server</faultcode>
+      <faultstring>[AuthenticationError.CLIENT_CUSTOMER_ID_IS_REQUIRED @ ; trigger:'&lt;null&gt;']</faultstring>
+      <detail>
+        <ApiExceptionFault xmlns="https://adwords.google.com/api/adwords/cm/v201409">
+          <message>[AuthenticationError.CLIENT_CUSTOMER_ID_IS_REQUIRED @ ; trigger:'&lt;null&gt;']</message>
+          <ApplicationException.Type>ApiException</ApplicationException.Type>
+          <errors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="AuthenticationError">
+            <fieldPath/>
+            <trigger>&lt;null&gt;</trigger>
+            <errorString>AuthenticationError.CLIENT_CUSTOMER_ID_IS_REQUIRED</errorString>
+            <ApiError.Type>AuthenticationError</ApiError.Type>
+            <reason>CLIENT_CUSTOMER_ID_IS_REQUIRED</reason>
+          </errors>
+        </ApiExceptionFault>
+      </detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+
+[Dec 26 2014 02:15:19.000000 - ERROR] POST /api/adwords/cm/v201409/CampaignService HTTP/1.1
+Host: adwords.google.com
+Connection: Keep-Alive
+User-Agent: PHP-SOAP/5.5.12, gzip
+Accept-Encoding: gzip, deflate
+Content-Encoding: gzip
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+Content-Length: 346
+Authorization: Bearer ya29.6AC0lJognyE0e4boKRQOJNLSNOg4ilnSYAefYYEhljrOGGGIEMkyIgV1ycHl8jcNACrqq2oLJ1mMyA
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201409">
+  <SOAP-ENV:Header>
+    <ns1:RequestHeader>
+      <ns1:developerToken>7vr3ixYdPVjWWQ_tvKuIjg</ns1:developerToken>
+      <ns1:userAgent>claes.noren@nitea.se (AwApi-PHP/5.7.1, Common-PHP/5.7.1, PHP/5.5.12)</ns1:userAgent>
+    </ns1:RequestHeader>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <ns1:query>
+      <ns1:query>SELECT Id, Name, Status ORDER BY Name LIMIT 0,500</ns1:query>
+    </ns1:query>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+HTTP/1.1 500 Internal Server Error
+Content-Type: text/xml; charset=UTF-8
+Content-Encoding: gzip
+Date: Fri, 26 Dec 2014 01:15:19 GMT
+Expires: Fri, 26 Dec 2014 01:15:19 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 519
+Server: GSE
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ResponseHeader xmlns="https://adwords.google.com/api/adwords/cm/v201409">
+      <requestId>00050b1442155cc80ac4f166f00040ce</requestId>
+      <serviceName>CampaignService</serviceName>
+      <methodName>query</methodName>
+      <operations>0</operations>
+      <responseTime>23</responseTime>
+    </ResponseHeader>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <faultcode>soap:Server</faultcode>
+      <faultstring>[AuthenticationError.CLIENT_CUSTOMER_ID_IS_REQUIRED @ ; trigger:'&lt;null&gt;']</faultstring>
+      <detail>
+        <ApiExceptionFault xmlns="https://adwords.google.com/api/adwords/cm/v201409">
+          <message>[AuthenticationError.CLIENT_CUSTOMER_ID_IS_REQUIRED @ ; trigger:'&lt;null&gt;']</message>
+          <ApplicationException.Type>ApiException</ApplicationException.Type>
+          <errors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="AuthenticationError">
+            <fieldPath/>
+            <trigger>&lt;null&gt;</trigger>
+            <errorString>AuthenticationError.CLIENT_CUSTOMER_ID_IS_REQUIRED</errorString>
+            <ApiError.Type>AuthenticationError</ApiError.Type>
+            <reason>CLIENT_CUSTOMER_ID_IS_REQUIRED</reason>
+          </errors>
+        </ApiExceptionFault>
+      </detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+
